@@ -2,4 +2,5 @@
     <string name="app_name">IPLocator</string>
     <string name="_192_168_0_1">192.168.0.1</string>
     <string name="as">As</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -6,63 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="384dp"
-        android:layout_height="wrap_content"
-        android:background="#aaff1744"
-        android:elevation="4dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#ff1744"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="back"
-                android:tint="#FFF"
-                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-                tools:ignore="HardcodedText,VectorDrawableCompat"
-                tools:targetApi="lollipop" />
-
-            <EditText
-                android:id="@+id/serchET"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#FFF"
-                android:hint="@string/_192_168_0_1"
-                android:inputType="number"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#AAFFFFFF"
-                tools:ignore="LabelFor" />
+                android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="More"
-                android:src="@drawable/ic_more_vert_black_24dp"
-                android:tint="#FFF"
-                tools:ignore="HardcodedText"
-                tools:targetApi="lollipop" />
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="back"
+                    android:tint="#FFF"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                    tools:ignore="HardcodedText,VectorDrawableCompat"
+                    tools:targetApi="lollipop" />
 
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/serchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFF"
+                    android:hint="@string/_192_168_0_1"
+                    android:inputType="text|number"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAFFFFFF"
+                    tools:ignore="LabelFor" />
 
-    </android.support.v7.widget.Toolbar>
+                <ImageButton
+                    android:layout_marginEnd="0dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#00FFFFFF"
+                    android:contentDescription="More"
+                    android:src="@drawable/ic_more_vert_black_24dp"
+                    android:tint="#FFF"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="lollipop" />
 
-    <include layout="@layout/content_main"/>
+            </LinearLayout>
 
-    <include layout="@layout/bottom_sheet"/>
+        </android.support.v7.widget.Toolbar>
+
+    <include
+        layout="@layout/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <include layout="@layout/bottom_sheet" />
 
 </android.support.design.widget.CoordinatorLayout>
