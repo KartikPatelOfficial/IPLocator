@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="384dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#aaff1744"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="back"
+                android:tint="#FFF"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="HardcodedText,VectorDrawableCompat"
+                tools:targetApi="lollipop" />
+
+            <EditText
+                android:id="@+id/serchET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFF"
+                android:hint="@string/_192_168_0_1"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAFFFFFF"
+                tools:ignore="LabelFor" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="More"
+                android:src="@drawable/ic_more_vert_black_24dp"
+                android:tint="#FFF"
+                tools:ignore="HardcodedText"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/content_main"/>
+
+    <include layout="@layout/bottom_sheet"/>
+
+</android.support.design.widget.CoordinatorLayout>

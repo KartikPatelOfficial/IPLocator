@@ -6,7 +6,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "co.deucate.iplocator"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "0.1"
@@ -22,9 +22,20 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
+    //Bottom sheet
+    implementation 'com.android.support:design:27.1.1'
+
+    //HTTP request
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    //Materialize dialog
     implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+
+    //Better json parse
     implementation 'com.beust:klaxon:3.0.1'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
 }
