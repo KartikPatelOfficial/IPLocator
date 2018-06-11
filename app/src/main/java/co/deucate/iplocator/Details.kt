@@ -17,5 +17,4 @@ data class Details(
         val lat: Double = 0.0,
         val status: String
 
-
 )
